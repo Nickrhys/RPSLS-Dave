@@ -3,8 +3,8 @@ describe("RpslsDave", function() {
 
   beforeEach(function() {
 
-    player1 = new Player('Dave1');
-    player2 = new Player('Dave2');
+    player1 = new Player('Dave');
+    player2 = new Player('David');
     game = new Game(player1, player2);
 
   });
@@ -163,8 +163,17 @@ describe("RpslsDave", function() {
       });
 
     });
-    
+
   });
 
+  describe('victory messages', function() {
+    
+    it("should return the winner's pick, the verb and the losers pick", function() {
+      player1.picks('scissors');
+      player2.picks('rock');
+      expect(game.winningMessage()).toEqual('rock crushes scissors');
+    });
+  
+  });
 
 });
