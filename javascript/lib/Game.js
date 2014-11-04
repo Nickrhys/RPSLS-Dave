@@ -7,7 +7,8 @@ Game.prototype.PAIRS = {
   rock:     {scissors: true, lizard: true},
   paper:    {rock: true, spock: true}, 
   scissors: {lizard: true, paper: true},
-  lizard:   {spock: true, paper: true}
+  lizard:   {spock: true, paper: true},
+  spock:    {scissors: true, rock: true}
 }
 
 Game.prototype.winner = function() {
