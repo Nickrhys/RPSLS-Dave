@@ -29,6 +29,12 @@ describe("RpslsDave", function() {
         player2.picks('lizard');
         expect(game.winner()).toBe(player1);
       });
+
+      it('should lose to Spock', function(){
+        player1.picks('rock');
+        player2.picks('spock');
+        expect(game.winner()).toBe(player2);
+      });
       
     });
 
