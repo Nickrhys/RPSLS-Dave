@@ -12,7 +12,7 @@ describe("RpslsDave", function() {
   describe('winning and losing', function() {
     
     describe('rock', function() {
-      it('should beat scissors', function(){
+      it('should beat scissors', function() {
         player1.picks('rock');
         player2.picks('scissors');
         expect(game.winner()).toBe(player1);
@@ -30,10 +30,19 @@ describe("RpslsDave", function() {
         expect(game.winner()).toBe(player1);
       });
 
-      it('should lose to Spock', function(){
+      it('should lose to Spock', function() {
         player1.picks('rock');
         player2.picks('spock');
         expect(game.winner()).toBe(player2);
+      });
+      
+    });
+
+    describe('paper', function() {
+      it('should beat rock', function(){
+        player1.picks('paper');
+        player2.picks('rock');
+        expect(game.winner()).toBe(player1)
       });
       
     });

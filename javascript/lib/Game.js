@@ -3,15 +3,16 @@ function Game(player1, player2) {
   this.player2 = player2;
 }
 
+Game.prototype.PAIRS = {
+  rock:  {scissors: true, lizard: true},
+  paper: {rock: true} 
+}
+
 Game.prototype.winner = function() {
-  if(this.player2.pick == 'scissors') { 
-    return this.player1;
-  }
-  else if (this.player2.pick == 'lizard') { 
+  if(this.PAIRS[this.player1.pick][this.player2.pick]){ 
     return this.player1;
   }
   else { 
     return this.player2;
   }
-
 };
