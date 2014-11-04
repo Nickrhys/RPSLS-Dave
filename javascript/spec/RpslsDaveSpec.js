@@ -18,6 +18,12 @@ describe("RpslsDave", function() {
         expect(game.winner()).toBe(player1);
       });
 
+      it('should lose to paper', function() {
+        player1.picks('rock');
+        player2.picks('paper');
+        expect(game.winner()).toBe(player2);
+      });
+
     });
 
   });
