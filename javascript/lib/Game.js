@@ -12,10 +12,16 @@ Game.prototype.PAIRS = {
 }
 
 Game.prototype.winner = function() {
+  if(this._isSamePick()) return null;
+
   if(this.PAIRS[this.player1.pick][this.player2.pick]){ 
     return this.player1;
   }
   else { 
     return this.player2;
   }
+}
+
+Game.prototype._isSamePick = function() {
+  return this.player1.pick === this.player2.pick;
 };
