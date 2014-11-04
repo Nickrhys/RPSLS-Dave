@@ -24,6 +24,12 @@ describe("RpslsDave", function() {
         expect(game.winner()).toBe(player2);
       });
 
+      it('should beat lizard', function() {
+        player1.picks('rock');
+        player2.picks('lizard');
+        expect(game.winner()).toBe(player1);
+      });
+      
     });
 
   });

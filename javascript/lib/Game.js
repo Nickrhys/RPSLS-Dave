@@ -4,7 +4,11 @@ function Game(player1, player2) {
 }
 
 Game.prototype.winner = function() {
-  if(this.player2.pick == 'scissors'){ return this.player1;
+  if(this.player2.pick == 'scissors') { 
+    return this.player1;
+  }
+  else if (this.player2.pick == 'lizard') { 
+    return this.player1;
   }
   else { 
     return this.player2;
