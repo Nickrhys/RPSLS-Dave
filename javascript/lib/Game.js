@@ -4,8 +4,10 @@ function Game(player1, player2) {
 }
 
 Game.prototype.PAIRS = {
-  rock:  {scissors: true, lizard: true},
-  paper: {rock: true, spock: true} 
+  rock:     {scissors: true, lizard: true},
+  paper:    {rock: true, spock: true}, 
+  scissors: {lizard: true, paper: true},
+  lizard:   {spock: true, paper: true}
 }
 
 Game.prototype.winner = function() {
