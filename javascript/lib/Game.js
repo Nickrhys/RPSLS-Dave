@@ -5,7 +5,7 @@ function Game(player1, player2) {
 
 Game.prototype.PAIRS = {
   rock:  {scissors: true, lizard: true},
-  paper: {rock: true} 
+  paper: {rock: true, spock: true} 
 }
 
 Game.prototype.winner = function() {
